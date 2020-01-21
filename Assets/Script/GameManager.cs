@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public const string httpserver = "";
+    private const string httpserver = "";
 
-
+    public string GetHttpServer()
+    {
+        return httpserver;
+    }
 }

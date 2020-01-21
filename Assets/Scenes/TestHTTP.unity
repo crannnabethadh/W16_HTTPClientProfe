@@ -679,6 +679,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 433860729}
+  - component: {fileID: 433860730}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -700,6 +701,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &433860730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433860728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eb92d6ba011330419f071d7d90495ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1569,6 +1582,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1181937771}
+  - component: {fileID: 1181937772}
   m_Layer: 5
   m_Name: Login
   m_TagString: Untagged
@@ -1599,6 +1613,21 @@ RectTransform:
   m_AnchoredPosition: {x: 166, y: 84}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1181937772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181937770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0e1d4608237a2040b1b250d9991421b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emailInputField: {fileID: 729027871}
+  passwordInputField: {fileID: 54831549}
+  loginButton: {fileID: 1124237343}
 --- !u!1 &1228293413
 GameObject:
   m_ObjectHideFlags: 0
@@ -1835,6 +1864,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1384517846}
+  - component: {fileID: 1384517847}
   m_Layer: 5
   m_Name: Register
   m_TagString: Untagged
@@ -1866,6 +1896,24 @@ RectTransform:
   m_AnchoredPosition: {x: -166, y: 84}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1384517847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384517845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ccd62cafacf5f647b2526e9fdba76ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emailInputField: {fileID: 1695394503}
+  passwordInputField: {fileID: 1181416631}
+  confirmPasswordInputField: {fileID: 1526113773}
+  registerButton: {fileID: 1656073618}
+  messageBoardText: {fileID: 1956952414}
+  gameManager: {fileID: 433860730}
 --- !u!1 &1526113771
 GameObject:
   m_ObjectHideFlags: 0
@@ -2200,7 +2248,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1656073619}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1384517847}
+        m_MethodName: OnRegisterButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1656073619
 MonoBehaviour:
   m_ObjectHideFlags: 0
