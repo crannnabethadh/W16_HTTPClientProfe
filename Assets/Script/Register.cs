@@ -62,7 +62,7 @@ public class Register : MonoBehaviour
 
         if (httpClient.isNetworkError || httpClient.isHttpError)
         {
-            throw new Exception("OnRegisterButtonClick: Network Error");
+            throw new Exception("OnRegisterButtonClick: Network Error" + httpClient.error);
         }
         
         messageBoardText.text += "\n" + httpClient.responseCode;
